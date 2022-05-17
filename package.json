@@ -1,0 +1,42 @@
+{
+    "name": "202205-w02ch02_marina-navarrete",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint",
+        "test:watch": "jest --watchAll"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MarinaNaM/202205-W02CH02_Marina-Navarrete.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MarinaNaM/202205-W02CH02_Marina-Navarrete/issues"
+    },
+    "homepage": "https://github.com/MarinaNaM/202205-W02CH02_Marina-Navarrete#readme",
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.17.12",
+        "eslint": "^8.15.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "jest": "^28.1.0"
+    },
+    "prettier": {
+        "singleQuote": true
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs"
+                ]
+            }
+        }
+    }
+}
