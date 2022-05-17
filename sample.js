@@ -24,3 +24,14 @@ export function shift(array) {
     pop(array);
     return item;
 }
+
+export function unshift(array, item) {
+    array.length = array.length + 1;
+    let counter = 0;
+    for (let i = array.length; i >= 0; i--) {
+        array[counter] = array[i];
+        counter--;
+    }
+    array[0] = item;
+    return array.length;
+}
