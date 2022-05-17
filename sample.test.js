@@ -1,4 +1,4 @@
-import { arrayLenght, push, pop, shift } from './sample.js';
+import { arrayLenght, push, pop, shift, unshift } from './sample.js';
 
 describe('Given the function arrayLenght ', () => {
     describe('When receive []', () => {
@@ -58,5 +58,23 @@ describe('Given the function shift ', () => {
             shift(array);
             expect(array).toContain(2, 3);
         });
+    });
+});
+
+describe('Given the function unshift ', () => {
+    describe('When receive [(7, 77, 777], 8)', () => {
+        test('Then should be 4', () => {
+            const parameter1 = [7, 77, 77];
+            const parameter2 = 8;
+            const newUnshift = unshift(parameter1, parameter2);
+            expect(newUnshift).toBe(4);
+        });
+    });
+
+    test('Then it should return 8, 7, 77, 777', () => {
+        const parameter1 = [7, 77, 77];
+        const parameter2 = 8;
+        unshift(parameter1, parameter2);
+        expect(parameter1).toContain(8, 7, 77, 77);
     });
 });
