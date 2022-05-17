@@ -5,9 +5,8 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
         "lint": "eslint",
-        "test:watch": "jest --watchAll"
+        "test": "jest --watchAll --coverage"
     },
     "repository": {
         "type": "git",
@@ -24,7 +23,10 @@
         "eslint": "^8.15.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-config-prettier": "^8.5.0",
+        "eslint-config-standard": "^17.0.0",
         "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.2.0",
+        "eslint-plugin-promise": "^6.0.0",
         "jest": "^28.1.0"
     },
     "prettier": {
