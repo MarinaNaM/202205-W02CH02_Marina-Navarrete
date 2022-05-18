@@ -1,4 +1,14 @@
-import { arrayLenght, push, pop, shift, unshift } from './sample.js';
+import {
+    arrayLenght,
+    push,
+    pop,
+    shift,
+    unshift,
+    some,
+    every,
+    find,
+    filter,
+} from './sample.js';
 
 describe('Given the function arrayLenght ', () => {
     describe('When receive []', () => {
@@ -76,5 +86,70 @@ describe('Given the function unshift ', () => {
         const parameter2 = 8;
         unshift(parameter1, parameter2);
         expect(parameter1).toContain(8, 7, 77, 77);
+    });
+});
+
+describe('Given the function some ', () => {
+    describe('When receive ([1, 2, 3, 4], (algo) => algo > 5)', () => {
+        test('Then should return true', () => {
+            const parameter1 = [1, 2, 3, 4];
+            const parameter2 = (algo) => algo > 5;
+            expect(some(parameter1, parameter2)).toBe(false);
+        });
+    });
+
+    describe('When receive ([1, 2, 3, 4, 7], (algo) => algo > 5;)', () => {
+        test('Then should return true', () => {
+            const parameter1 = [1, 2, 3, 4, 7];
+            const parameter2 = (algo) => algo > 5;
+            expect(some(parameter1, parameter2)).toBe(true);
+        });
+    });
+});
+
+describe('Given the function every ', () => {
+    describe('When receive ([7, 8, 9, 10], (algo) => algo > 5)', () => {
+        test('Then should return false', () => {
+            const parameter1 = [7, 8, 9, 10];
+            const parameter2 = (algo) => algo > 5;
+            expect(every(parameter1, parameter2)).toBe(true);
+        });
+    });
+
+    describe('When receive ([1, 2, 3, 4, 7], (algo) => algo > 5;)', () => {
+        test('Then should return false', () => {
+            const parameter1 = [1, 2, 3, 4];
+            const parameter2 = (algo) => algo > 5;
+            expect(every(parameter1, parameter2)).toBe(false);
+        });
+    });
+});
+
+describe('Given the function find ', () => {
+    describe('When receive ([4, 3, 7, 8, 9, 10], (algo) => algo > 5)', () => {
+        test('Then should return 7', () => {
+            const parameter1 = [4, 3, 7, 8, 9, 10];
+            const parameter2 = (algo) => algo > 5;
+            expect(find(parameter1, parameter2)).toBe(7);
+        });
+    });
+
+    describe('When receive ([1, 2, 3, 4], (algo) => algo > 5;)', () => {
+        test('Then should return false', () => {
+            const parameter1 = [1, 2, 3, 4];
+            const parameter2 = (algo) => algo > 5;
+            expect(every(parameter1, parameter2)).toBe(false);
+        });
+    });
+});
+
+describe('Given the function filter ', () => {
+    describe('When receive ([4, 3, 7, 8, 9, 10], (algo) => algo > 5)', () => {
+        test('Then should return [7, 8, 9, 10]', () => {
+            const parameter1 = [4, 3, 7, 8, 9, 10];
+            const parameter2 = (algo) => algo > 5;
+            const result = filter(parameter1, parameter2);
+            expect(result).toEqual([7, 8, 9, 10]);
+        });
     });
 });
