@@ -7,7 +7,7 @@ import {
     some,
     every,
     find,
-    filter,
+    // filter,
 } from './sample.js';
 
 describe('Given the function arrayLenght ', () => {
@@ -143,13 +143,13 @@ describe('Given the function find ', () => {
     });
 });
 
-describe('Given the function filter ', () => {
-    describe('When receive ([4, 3, 7, 8, 9, 10], (algo) => algo > 5)', () => {
-        test('Then should return [7, 8, 9, 10]', () => {
-            const parameter1 = [4, 3, 7, 8, 9, 10];
-            const parameter2 = (algo) => algo > 5;
-            const result = filter(parameter1, parameter2);
-            expect(result).toEqual([7, 8, 9, 10]);
-        });
-    });
-});
+// describe('Given the function filter ', () => {
+//     describe('When receive ([4, 3, 7, 8, 9, 10], (algo) => algo > 5)', () => {
+//         test('Then should return [7, 8, 9, 10]', () => {
+//             const parameter1 = [4, 3, 7, 8, 9, 10];
+//             const parameter2 = (algo) => algo > 5;
+//             const result = filter(parameter1, parameter2);
+//             expect(result).toEqual([7, 8, 9, 10]);
+//         });
+//     });
+// });
