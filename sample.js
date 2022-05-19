@@ -67,9 +67,6 @@ export function some(array, myFunction) {
 //     return algo > 5; //porque algo>5 sólo puede dar verdadero o falso ;
 // }
 
-// const myFunction2 = (algo) => algo > 5;
-// console.log(some(array, myFunction));
-
 export function every(array, myFunction) {
     for (let i = 0; i < array.length; i++) {
         let blablabla6 = myFunction(array[i]);
